@@ -1,0 +1,88 @@
+	Cus_ID,Cus_Name,Age
+1,Ram,23
+2,Shyam,24
+3,Sid,26
+4,Gita,21
+5,Tharvesh,22
+
+
+Cus_ID,Cus_Name,Age
+6,Sita,21
+7,Joe,28
+8,Jay,22
+9,Soham,24
+10,Hari,29
+
+Appending
+Cus_ID,Cus_Name,Age
+1,Ram,23
+2,Shyam,24
+3,Sid,26
+4,Gita,21
+5,Tharvesh,22
+6,Sita,21
+7,Joe,28
+8,Jay,22
+9,Soham,24
+10,Hari,29
+
+
+Joining
+Cus_ID,Product_ID,Product_Name
+1,201,Pepsi
+2,202,Diet coke
+3,405,Monster
+6,708,Red Bull
+9,208,Sprite
+
+Cus_ID,Cus_Name,Age
+1,Ram,23
+2,Shyam,24
+3,Sid,26
+4,Gita,21
+5,Tharvesh,22
+
+common column name=key=Cus_ID
+Inner Join
+Cus_ID,Product_ID,Product_Name,Cus_ID,Cus_Name,Age
+1,201,Pepsi,1,Ram,23
+2,202,Diet coke,2,Shyam,24
+3,405,Monster,3,Sid,26
+
+Full Outer Join
+Cus_ID,Product_ID,Product_Name,Cus_ID,Cus_Name,Age
+1,201,Pepsi,1,Ram,23
+2,202,Diet coke,2,Shyam,24
+3,405,Monster,3,Sid,26
+6,708,Red Bull,Null,Null,Null
+9,208,Sprite,Null,Null,Null
+Null,Null,Null,4,Gita,21
+Null,Null,Null,5,Tharvesh,22
+
+
+Left Outer Join
+Cus_ID,Product_ID,Product_Name,Cus_ID,Cus_Name,Age
+1,201,Pepsi,1,Ram,23
+2,202,Diet coke,2,Shyam,24
+3,405,Monster,3,Sid,26
+6,708,Red Bull,Null,Null,Null
+9,208,Sprite,Null,Null,Null
+
+Left Anti
+Cus_ID,Product_ID,Product_Name,Cus_ID,Cus_Name,Age
+6,708,Red Bull,Null,Null,Null
+9,208,Sprite,Null,Null,Null
+
+Right Outer Join
+Cus_ID,Product_ID,Product_Name,Cus_ID,Cus_Name,Age
+1,201,Pepsi,1,Ram,23
+2,202,Diet coke,2,Shyam,24
+3,405,Monster,3,Sid,26
+Null,Null,Null,4,Gita,21
+Null,Null,Null,5,Tharvesh,22
+
+Right Anti
+Cus_ID,Product_ID,Product_Name,Cus_ID,Cus_Name,Age
+Null,Null,Null,4,Gita,21
+Null,Null,Null,5,Tharvesh,22
+
